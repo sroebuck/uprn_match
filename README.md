@@ -10,7 +10,7 @@ The file `data/addressbase_premium_scotland.gpkg` can be downloaded from [OS Dat
 
 The code in this repository is very simple.  It contains code that can read all the addresses from the Care Inspectorate DataStore CSV file and code that can read all of the `delivery_point_address` entries from AddressBase Premium for Scotland.  It uses the postcode entry to sub-select addresses that match the correct postcode and then it then uses one of a number of string similarity measures to match registered addresses with those in the Inspectorate Database and displays the matches.
 
-Currently the code does nothing more than testing the first forty addresses against manually assessed correct matches to try to establish the accuracy of this approach and provide a playground for testing alternative techniques.
+Currently the code does nothing more than testing the first forty addresses against manually assessed correct matches to try to establish the accuracy of this approach and provide a playground for testing alternative techniques.  It currently correctly matches 26 of the 40 addresses by simply choosing the most likely match of those it can find.
 
 At this point it has been establishes that the string similarity measure is giving insufficient priority to the building number.  Fixing this is likely to significantly increase the number of matches in the first 40 addresses.
 
